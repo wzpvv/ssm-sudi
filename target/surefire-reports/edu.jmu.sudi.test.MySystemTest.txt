@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: edu.jmu.sudi.test.MySystemTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.585 s <<< FAILURE! - in edu.jmu.sudi.test.MySystemTest
+test1(edu.jmu.sudi.test.MySystemTest)  Time elapsed: 0.569 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`sudi`.`sudi_deliver`, CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `sudi_user` (`userId`))
+### The error may exist in file [F:\java\xiangmu\ssmwaimai\sudi\sudi\target\classes\edu\jmu\sudi\dao\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: delete from sudi_user where userId=?
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`sudi`.`sudi_deliver`, CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `sudi_user` (`userId`))
+; Cannot delete or update a parent row: a foreign key constraint fails (`sudi`.`sudi_deliver`, CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `sudi_user` (`userId`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`sudi`.`sudi_deliver`, CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `sudi_user` (`userId`))
+	at edu.jmu.sudi.test.MySystemTest.test1(MySystemTest.java:43)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`sudi`.`sudi_deliver`, CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `sudi_user` (`userId`))
+	at edu.jmu.sudi.test.MySystemTest.test1(MySystemTest.java:43)
+
